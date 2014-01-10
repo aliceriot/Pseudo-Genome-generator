@@ -20,8 +20,14 @@ def createseq(length,gc):
 def wrfasta(seqname,filename,seq):
 	writefile = open (filename, 'w')
 	writefile.write('>' + seqname '\n')
+	index = 1
 	for i in seq:
-		if i % 80 = 
+		if index % 80 == 0:
+			writefile.write(i + '\n')
+			index += 1
+		else:
+			writefile.write(i)
+			index += 1
 	writefile.close()
 	return None
 
