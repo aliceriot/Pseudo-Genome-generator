@@ -19,7 +19,9 @@ def createseq(length,gc):
 #write to a .fasta file with a given seqname, filename, and sequence
 def wrfasta(seqname,filename,seq):
 	writefile = open (filename, 'w')
-	writefile.write('>' + seqname "\n" + seq)
+	writefile.write('>' + seqname '\n')
+	for i in seq:
+		if i % 80 = 
 	writefile.close()
 	return None
 
